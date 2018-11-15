@@ -10,11 +10,15 @@
 %\usepackage[framed]{mcode} %Matlab 
 \usepackage{graphicx}        % standard LaTeX graphics tool
 
+% Spaces in names of file locations
+
+\usepackage[space]{grffile}
+
 %My own
 
 \usepackage{color}
 \usepackage{amsmath}
-%\usepackage{hyperref}
+\usepackage{hyperref}
 
 \newcommand{\jk}[1]{{\color{blue}JK: #1}}
 
@@ -72,9 +76,44 @@ The color package allows you to write stuff in color, for example {\color{magent
 
 
 
-Here, I talk about some background. I made some changes.
+Here, I talk about some background. I made some changes. Look at the cows in Figures \ref{fig:cow1}--\ref{fig:cow2}.
 
-More changes, cos I forgot something.
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.45\textwidth]{./cowinside}
+	\vspace{-20pt}
+	\end{center}
+\caption{\textbf{A splendid cow.} Look at this magnificent thing.}
+\label{fig:cow1}
+\end{figure}
+
+More changes, cos I forgot something. Oh, here's a table, Table \ref{tab:table1}.
+
+\begin{figure}
+	\begin{center}
+	\includegraphics[width=0.45\textwidth]{./cowoutside}
+	\vspace{-20pt}
+	\end{center}
+\caption{\textbf{A splendid cow.} Look at this magnificent thing.}
+\label{fig:cow2}
+\end{figure}
+
+\begin{table}[!ht]
+\begin{center}
+\begin{tabular}{c|cc|cccccccc}%\hline
+$d$&$\leq4$&$5$&$6$&$7$&$8$&$9$&$10$&$11$&$12$&$13$\\     
+\hline
+$\rho_{x}^{d}$& $-\infty$   &  $0.4133$   &    $0.4134$  & $0.6202$ & $0.6202$   &$0.6365$    & $0.6365$   & $0.6376$ &$0.6377$&$0.6377$\\%\hline
+$\eta_{x}^d$  &$\infty$   & $0.8283$   & $0.8282$  &   $0.6758$   & $0.6757$    & $0.6495$ &  $0.6495$&  $0.6494$&$0.6494$&$0.6428$ \\\hline
+$d$&$14$&$15$&$16$&$17$&$18$&$19$&$20$&$21$&$22$&$23$\\\hline
+$\rho_{x}^{d}$&$0.6377$&$0.6377$&$0.6377$&$0.6377$&$0.6377$&$0.6377$&$0.6377$&$0.6377$&$0.6377$&$0.6377$ \\
+$\eta_{x}^d$  &$0.6428$ &$0.6404$&$0.6404$ &$0.6402$&$0.6402$&$0.6389$&$0.6389$&$0.6387$&$0.6387$&$0.6384$\\
+\end{tabular}%}
+\caption{Bounds on the mean of the stationary measures of the SDE~\eqref{eq:x3}. In total, $40$ bounds were computed taking a total CPU time of $10.3$ seconds, averaging $0.26$ seconds per bound.}
+%\vspace{-20pt}
+\label{tab:table1}
+\end{center}
+\end{table}
 
 \section{Methods}
 
