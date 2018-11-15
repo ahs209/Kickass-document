@@ -1,0 +1,95 @@
+% Preamble
+
+\documentclass[a4paper,11pt,leqno]{article}
+\usepackage[top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}	%Margins
+
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+\renewcommand{\baselinestretch}{1.5} % Double spacing?
+
+%\usepackage[framed]{mcode} %Matlab 
+\usepackage{graphicx}        % standard LaTeX graphics tool
+
+%My own
+
+\usepackage{color}
+\usepackage{amsmath}
+%\usepackage{hyperref}
+
+\newcommand{\jk}[1]{{\color{blue}JK: #1}}
+
+\newcommand{\ah}[1]{{\color{green}AH: #1}}
+
+
+
+%% Equation numbering
+
+\numberwithin{equation}{section}
+
+
+\begin{document}
+
+
+% Title bit
+
+\title{Kickass document}
+\author{Alice boo}
+
+\maketitle
+
+% Abstract
+
+\begin{abstract}
+This is the abstract.
+\end{abstract}
+
+% Table of contents
+
+\tableofcontents
+
+\newpage
+
+\section{Introduction}
+
+This thesis is structured as follows... It is long. In Section \ref{tissuelabel}, we do blabla. In particular, we compare our results with those in \cite{RN33}.
+
+This equation is important:
+%
+$$e^{\pi i}+1=0,$$
+%
+where $\pi$ denotes that famous constant. And this other one I'm going to give a number to:
+%
+\begin{equation}\label{eq:anequation}
+\int_0^\infty e^{-t}dt = 1.
+\end{equation}
+%
+Then I can talk about Equation~\eqref{eq:anequation}. 
+
+The color package allows you to write stuff in color, for example {\color{magenta} this in pink} and {\color{red} this in red}.
+
+\subsection{Background theory}
+%Here, I discuss some background.
+
+
+
+Here, I talk about some background. I made some changes.
+
+More changes, cos I forgot something.
+
+\section{Methods}
+
+And bring up Equation~\eqref{eq:anequation} again. 
+
+
+\subsection{Other stuff}
+
+Another change. This final change convinces me.
+
+\subsection{Tissue nonsense}\label{sec:tissuelabel}
+This is how I do my shit.
+
+\bibliographystyle{plain}
+
+\bibliography{PhD_Endnote}
+
+\end{document}
